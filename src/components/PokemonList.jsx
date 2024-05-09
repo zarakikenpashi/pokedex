@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function PokemonList({ pokemons }) {
 
 
   return (
-    <div className="px-4 md:px-6 lg:px-56 py-5">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
         {pokemons.map((pokemon) => 
-            <div className="card p-5 bg-slate-50 hover:shadow-2xl cursor-pointer" key={pokemon.name}>
+            <Link 
+                to={`detail/${pokemon.id}`}
+                className="card p-5 bg-slate-50 hover:shadow-2xl cursor-pointer" 
+                key={pokemon.name}>
                 <img src={pokemon.image} alt="" />
                 <div>
                     <h5 className='text-2xl'>{pokemon.name}</h5>
@@ -19,20 +23,10 @@ function PokemonList({ pokemons }) {
                                 className='rounded-md w-24 flex justify-center items-center text-white'
                             >{category.name}</span>
                         )}
-                    
                     </div>
-                
                 </div>
-                
-            </div>
-        
+            </Link>
         )}
-
-        
-        </div>
-    
-    
-    
     </div>
   )
 }
