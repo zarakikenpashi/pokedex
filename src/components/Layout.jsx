@@ -8,6 +8,8 @@ function Layout() {
             <img src={pokemonLogo} alt=""  className='w-72' />
         </div>
         <Outlet/>
+
+        
     </div>
   )
 }

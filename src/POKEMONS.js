@@ -1,16 +1,16 @@
 
 import bulbizarre from './assets/bulbizarre.png';
-import herbizarre from './assets/herbizarre.png';
-import florizarre  from './assets/florizarre.png';
-import salameche from './assets/salameche.png';
-import reptincel  from './assets/reptincel.png';
-import dracaufeu from './assets/dracaufeu.png';
-import carapuce  from './assets/carapuce.png';
 import carabaffe from './assets/carabaffe.png';
-import tortank from './assets/tortank.png';
+import carapuce from './assets/carapuce.png';
 import chenipan from './assets/chenipan.png';
 import chrysacier from './assets/chrysacier.png';
+import dracaufeu from './assets/dracaufeu.png';
+import florizarre from './assets/florizarre.png';
+import herbizarre from './assets/herbizarre.png';
 import papilusion from './assets/papilusion.png';
+import reptincel from './assets/reptincel.png';
+import salameche from './assets/salameche.png';
+import tortank from './assets/tortank.png';
 
 const POKEMONS = [
   {

@@ -2,6 +2,7 @@ import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import Details from './pages/Details'
 import Layout from './components/Layout'
+import Create from './pages/Create'
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path:'detail/:detailId',
                 element:<Details />
+            },
+            {
+                path:'create',
+                element:<Create />
             }
         ]
     }

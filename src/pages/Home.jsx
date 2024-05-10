@@ -1,10 +1,11 @@
 import { useState } from "react"
 import POKEMONS from "../POKEMONS"
-import SearchBar from "../components/SearchBar"
 import PokemonList from "../components/PokemonList"
+import SearchBar from "../components/SearchBar"
 
 function Home() {
   const [pokemons, setPokemons] = useState(POKEMONS)
+
 
   const handlePokeList = (pokemon) => {
 
@@ -20,10 +21,11 @@ function Home() {
   }
 
   return (
-    <>
+    <div className="relative">
       <SearchBar setPokelist={handlePokeList}/>
       <PokemonList pokemons={pokemons}/>
-    </>
+      {/* <BtnCreate /> */}
+    </div>
   )
 }
 
