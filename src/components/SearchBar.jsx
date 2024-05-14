@@ -1,12 +1,13 @@
-import { useState } from "react";
-import PropTypes from 'prop-types';
+import { useContext, useState } from "react";
+import { PokemonContext } from '../context/PokemonContext';
 
-function SearchBar({setPokelist}) {
+function SearchBar() {
+    const {handleSearch} = useContext(PokemonContext)
     const [valeur, setvaleur] = useState('')
 
     const handleChange = (e) =>{
         setvaleur(e.target.value)
-        setPokelist(e.target.value.toLowerCase())
+        handleSearch(e.target.value.toLowerCase())
     }
 
   return (
@@ -24,7 +25,5 @@ function SearchBar({setPokelist}) {
   )
 }
 
-SearchBar.propTypes = {
-    setPokelist: PropTypes.func
-}
+
 export default SearchBar

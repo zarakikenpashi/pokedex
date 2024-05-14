@@ -1,35 +1,20 @@
-import {createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home'
-import Details from './pages/Details'
-import Layout from './components/Layout'
-import Create from './pages/Create'
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Layout />,
-        children: [
-            {
-                path:'',
-                element:<Home />
-            },
-            {
-                path:'detail/:detailId',
-                element:<Details />
-            },
-            {
-                path:'create',
-                element:<Create />
-            }
-        ]
-    }
-
-])
+import Header from "./components/Header"
+import PokemonList from "./components/PokemonList"
+import SearchBar from "./components/SearchBar"
 
 function App() {
-    return(
-        <RouterProvider router={router}/>
-    )
+
+  return(
+    <>
+    <div className="relative">
+      <Header />
+      <SearchBar />
+      <PokemonList/>
+    </div>
+    </>
+
+  )
 }
+
 
 export default App
